@@ -27,6 +27,8 @@ Once the package is downloaded [and unzipped], follow the below steps to run the
 
     where <<directory_path>> is the full or relative path of the directory containing all files in which the search will run.
     
+    **Try "search dir" as <<directory_path>>**
+    
 - The command prompts will show:
 
         <<file_count>> files read in directory <<directory_path>>

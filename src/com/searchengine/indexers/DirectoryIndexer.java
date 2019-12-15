@@ -42,13 +42,13 @@ public class DirectoryIndexer implements ISearchIndexer<ArrayList<String>> {
         return this.fileFilter.filter(this.directory);
     }
 
-    private void fillSearchDataStructure(Trie<ArrayList<String>> trie, String fileName, String contentFile) {
+    protected void fillSearchDataStructure(Trie<ArrayList<String>> trie, String fileName, String contentFile) {
         final String[] words = contentFile.split(" ");
         for (String word: words) {
             if (trie.containsKey(word) && !trie.find(word).contains(fileName)) {
                 trie.find(word).add(fileName);
             }
-            else {
+            else if (!word.equals("")) {
                 ArrayList<String> data = new ArrayList<String>();
                 data.add(fileName);
                 trie.insert(word, data);

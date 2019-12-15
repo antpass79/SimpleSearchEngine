@@ -10,7 +10,7 @@ public class Trie<T> extends TrieNode<T> implements ISearchDataStructure {
     }
 
     public void insert(String key, T data) {
-        TrieNode<T> referenceNode;
+        TrieNode referenceNode;
         char firstChar = TrieKey.getFirstChar(key);
         if (this.getChildren().containsKey(firstChar)) {
             referenceNode = this.getChildren().get(firstChar);
@@ -37,7 +37,7 @@ public class Trie<T> extends TrieNode<T> implements ISearchDataStructure {
                 currentNode = currentNode.getChildren().get(ch);
             }
         }
-        return found && currentNode.getChildren().isEmpty();
+        return found && currentNode.getData() != null;
     }
 
     public T find(String key) throws ArrayIndexOutOfBoundsException {

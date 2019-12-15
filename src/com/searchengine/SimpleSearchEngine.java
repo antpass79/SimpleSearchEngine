@@ -21,8 +21,7 @@ public class SimpleSearchEngine extends SearchEngine<ArrayList<String>> {
                 searchedData.forEach(data -> {
                     if (!map.containsKey(data)) {
                         map.put(data, 1);
-                    }
-                    else {
+                    } else {
                         map.put(data, map.get(data) + 1);
                     }
                 });

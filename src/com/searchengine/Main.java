@@ -23,7 +23,7 @@ public class Main {
         ISearchIndexer indexer = createIndexer(indexableDirectory);
         System.out.println(indexer.getSourceNames().length + " files read in directory " + indexableDirectory.getName());
 
-        ISearchEngine searchEngine = createSearchEngine(indexer);
+        var searchEngine = createSearchEngine(indexer);
         int takeFirstElements = 10;
 
         initializeCommands(searchEngine, takeFirstElements);

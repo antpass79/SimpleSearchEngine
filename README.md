@@ -10,6 +10,7 @@ There is always time to complicate one's life. All components involved in the li
 Below the assumptions:
 
 - a *word* to find is a consecutive list of any characters
+- the finding process is case sensitive
 - the *whitespace* is used to separate words
 - only *.txt* file can be processed
 - only the first level inside the specified folder is processed (not sub folder)

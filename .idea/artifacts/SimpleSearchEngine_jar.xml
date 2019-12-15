@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SimpleSearchEngine:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SimpleSearchEngine_jar</output-path>
+    <root id="archive" name="SimpleSearchEngine.jar">
+      <element id="module-output" name="SimpleSearchEngine" />
+    </root>
+  </artifact>
+</component>

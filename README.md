@@ -23,7 +23,7 @@ The console application is written with Java 11 and tested with JUnit 5.4.
 ### Steps to run
 Once the package is downloaded [or unzipped], follow the below steps to run the program:
 
-- Open a command prompt
+- Open a command prompt with administrative privileges
 
 - Navigate to the *dist* folder
 

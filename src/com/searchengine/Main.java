@@ -54,12 +54,12 @@ public class Main {
     }
 
     private static void initializeCommands(ISearchEngine searchEngine, int takeFirstElements) {
-        CommandResolver.register(":quit", new CommandBuilder()
+        CommandResolver.register(Commands.COMMAND_QUIT, new CommandBuilder()
                 .commandName(Commands.COMMAND_QUIT)
                 .build());
 
-        CommandResolver.register("search", new CommandBuilder()
-                .commandName("search")
+        CommandResolver.register(Commands.COMMAND_SEARCH, new CommandBuilder()
+                .commandName(Commands.COMMAND_SEARCH)
                 .constructorParameters(new Object[] { searchEngine, takeFirstElements })
                 .build());
     }

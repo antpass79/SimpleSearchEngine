@@ -16,6 +16,11 @@ Below the assumptions:
 - only the first level inside the specified folder is processed (not sub folder)
 
 ## Run the program
+
+### Pre-requirements
+The console application is written with Java 11 and tested with JUnit 5.4.
+
+### Steps to run
 Once the package is downloaded [or unzipped], follow the below steps to run the program:
 
 - Open a command prompt

@@ -35,31 +35,28 @@ public class SearchStatisticsBuilder<T> implements ISearchStatisticsBuilder<Arra
         return this;
     }
     @Override
-    public SearchStatistics<ArrayList<T>>[] build() {
+    public SearchStatistics[] build() {
         final Map<Object, Integer> orderedMap = this.orderByRank(this.map);
-        final SearchStatistics<ArrayList<T>>[] searchStatistics = this.buildStatistics(orderedMap);
-
-        return searchStatistics;
+        return this.buildStatistics(orderedMap);
     }
 
-    protected SearchStatistics<ArrayList<T>>[] buildStatistics(Map<Object, Integer> orderedMap) {
-        List<SearchStatistics<ArrayList<T>>> searchStatisticsList = new ArrayList<SearchStatistics<ArrayList<T>>>();
+    protected SearchStatistics[] buildStatistics(Map<Object, Integer> orderedMap) {
+        List<SearchStatistics<ArrayList<T>>> searchStatisticsList = new ArrayList<>();
 
         for (Map.Entry<Object, Integer> entry : orderedMap.entrySet()) {
             SearchStatistics searchStatistics = new SearchStatistics(entry.getKey(), this.rankAlgorithm.calculate(entry.getValue(), this.wordCount));
             searchStatisticsList.add(searchStatistics);
         }
 
-        return searchStatisticsList.stream().collect(Collectors.toList()).toArray(new SearchStatistics[searchStatisticsList.size()]);
+        return searchStatisticsList.toArray(new SearchStatistics[0]);
     }
 
     private Map<Object, Integer> orderByRank(HashMap<Object, Integer> indexes) {
-        final Map<Object, Integer> orderedByRank = indexes.entrySet()
+
+        return indexes.entrySet()
                 .stream()
                 .limit(this.takeFirstElements)
                 .sorted((Map.Entry.<Object, Integer>comparingByValue().reversed()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-
-        return orderedByRank;
     }
 }

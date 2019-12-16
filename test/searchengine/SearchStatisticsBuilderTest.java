@@ -12,14 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SearchStatisticsBuilderTest {
     @Test
     public void statisticsLength() {
-        ISearchStatisticsBuilder<String> builder = new SearchStatisticsBuilder();
+        var builder = new SearchStatisticsBuilder();
 
-        HashMap<Object, Integer> map = new HashMap<Object, Integer>();
+        HashMap<Object, Integer> map = new HashMap<>();
         map.put("File1.txt", 3);
         map.put("File2.txt", 5);
         map.put("File3.txt", 7);
 
-        SearchStatistics<String>[] statistics = builder
+        SearchStatistics[] statistics = builder
                 .wordCount(10)
                 .map(map)
                 .takeFirstElements(3)
@@ -30,14 +30,14 @@ class SearchStatisticsBuilderTest {
 
     @Test
     public void statistics_Percentage() {
-        ISearchStatisticsBuilder<String> builder = new SearchStatisticsBuilder();
+        var builder = new SearchStatisticsBuilder();
 
-        HashMap<Object, Integer> map = new HashMap<Object, Integer>();
+        HashMap<Object, Integer> map = new HashMap<>();
         map.put("File1.txt", 3);
         map.put("File2.txt", 0);
         map.put("File3.txt", 10);
 
-        SearchStatistics<String>[] statistics = builder
+        SearchStatistics[] statistics = builder
                 .wordCount(10)
                 .map(map)
                 .takeFirstElements(3)
@@ -49,5 +49,29 @@ class SearchStatisticsBuilderTest {
         assertEquals("File3.txt", statistics[0].getData(), "statistics data for the element 2 must be File1.txt");
         assertEquals(0, statistics[2].getRank(), "statistics rank for the element 3 must be 0");
         assertEquals("File3.txt", statistics[0].getData(), "statistics data for the element 3 must be File2.txt");
+    }
+
+    @Test
+    public void statisticsTakeFirstElements_5() {
+        var builder = new SearchStatisticsBuilder();
+
+        HashMap<Object, Integer> map = new HashMap<>();
+        map.put("File1.txt", 3);
+        map.put("File2.txt", 5);
+        map.put("File3.txt", 7);
+        map.put("File4.txt", 11);
+        map.put("File5.txt", 12);
+        map.put("File6.txt", 3);
+        map.put("File7.txt", 4);
+        map.put("File8.txt", 56);
+        map.put("File9.txt", 1);
+
+        SearchStatistics[] statistics = builder
+                .wordCount(10)
+                .map(map)
+                .takeFirstElements(5)
+                .build();
+
+        assertEquals(5, statistics.length, "statistics count must be 5");
     }
 }

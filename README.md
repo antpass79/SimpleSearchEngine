@@ -16,7 +16,7 @@ Below the assumptions:
 - only the first level inside the specified folder is processed (not sub folder)
 
 ## Run the program
-Once the package is downloaded [and unzipped], follow the below steps to run the program:
+Once the package is downloaded [or unzipped], follow the below steps to run the program:
 
 - Open a command prompt
 

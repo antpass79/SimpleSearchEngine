@@ -71,7 +71,7 @@ Once the package is downloaded [or unzipped], follow the below steps to run the 
 
  ## Run tests
  
-In the test folder there are a set of tests runnable from the development environment.
+In the test folder there are a set of tests runnable from the development environment (IntelliJ IDEA).
 The tests check:
 
 - the data structure

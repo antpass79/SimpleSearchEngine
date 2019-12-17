@@ -77,3 +77,9 @@ The tests check:
 - the data structure
 - the statistics builder
 - the search engine
+
+## Architecture
+
+The below class diagrams show the interactions among the components
+
+![architecture](assets/SearchEngine Class Diagrams.jpg)

@@ -82,4 +82,4 @@ The tests check:
 
 The below class diagrams show the interactions among the components
 
-![architecture](assets/SearchEngine Class Diagrams.jpg)
+![architecture](<assets/SearchEngine Class Diagrams.jpg>)

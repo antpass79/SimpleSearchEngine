@@ -22,7 +22,7 @@ class SearchStatisticsBuilderTest {
         SearchStatistics[] statistics = builder
                 .wordCount(10)
                 .map(map)
-                .takeFirstElements(3)
+                .takeFirstResults(3)
                 .build();
 
         assertEquals(3, statistics.length, "statistics count must be 3");
@@ -40,7 +40,7 @@ class SearchStatisticsBuilderTest {
         SearchStatistics[] statistics = builder
                 .wordCount(10)
                 .map(map)
-                .takeFirstElements(3)
+                .takeFirstResults(3)
                 .build();
 
         assertEquals(100, statistics[0].getRank(), "statistics rank for the element 1 must be 100");
@@ -69,7 +69,7 @@ class SearchStatisticsBuilderTest {
         SearchStatistics[] statistics = builder
                 .wordCount(10)
                 .map(map)
-                .takeFirstElements(5)
+                .takeFirstResults(5)
                 .build();
 
         assertEquals(5, statistics.length, "statistics count must be 5");

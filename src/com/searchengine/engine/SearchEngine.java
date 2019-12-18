@@ -6,7 +6,7 @@ import com.searchengine.statistics.SearchStatistics;
 
 import java.util.HashMap;
 
-public abstract class SearchEngine<T> implements ISearchEngine<SearchStatistics[]> {
+public abstract class SearchEngine<T> implements ISearchEngine<SearchStatistics> {
     ISearchStatisticsBuilder<T> searchStatisticsBuilder;
 
     ISearchDataStructure<T> searchDataStructure;
@@ -19,13 +19,13 @@ public abstract class SearchEngine<T> implements ISearchEngine<SearchStatistics[
         this.searchStatisticsBuilder = searchStatisticsBuilder;
     }
 
-    public final SearchStatistics[] search(String[] words, int takeFirstElements) {
+    public final SearchStatistics[] search(String[] words, int takeFirstResults) {
         HashMap<Object, Integer> map = this.onSearch(words);
 
         return this.searchStatisticsBuilder
                 .wordCount(words.length)
                 .map(map)
-                .takeFirstElements(takeFirstElements)
+                .takeFirstResults(takeFirstResults)
                 .build();
     }
 

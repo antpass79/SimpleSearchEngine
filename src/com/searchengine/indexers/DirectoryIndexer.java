@@ -2,6 +2,7 @@ package com.searchengine.indexers;
 
 import com.searchengine.datastructures.ISearchDataStructure;
 import com.searchengine.datastructures.Trie;
+import com.searchengine.datastructures.TrieNode;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,8 +46,11 @@ public class DirectoryIndexer implements ISearchIndexer<ArrayList<String>> {
     protected void fillSearchDataStructure(Trie<ArrayList<String>> trie, String fileName, String contentFile) {
         final String[] words = contentFile.split(" ");
         for (String word: words) {
-            if (trie.containsKey(word) && !trie.find(word).contains(fileName)) {
-                trie.find(word).add(fileName);
+            if (trie.containsKey(word)) {
+                if (!trie.find(word).contains(fileName)) {
+                    ArrayList<String> files = trie.find(word);
+                    files.add(fileName);
+                }
             }
             else if (!word.equals("")) {
                 ArrayList<String> data = new ArrayList<String>();

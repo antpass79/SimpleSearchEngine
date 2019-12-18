@@ -7,12 +7,12 @@ public class SearchStatisticsBuilder<T> implements ISearchStatisticsBuilder<Arra
     IRankAlgorithm rankAlgorithm;
     int wordCount;
     HashMap<Object, Integer> map;
-    int takeFirstElements;
+    int takeFirstResults;
 
     public SearchStatisticsBuilder() {
         this.rankAlgorithm = new BaseRankAlgorithm();
         this.wordCount = 0;
-        this.takeFirstElements = 10;
+        this.takeFirstResults = 10;
     }
     public SearchStatisticsBuilder(IRankAlgorithm rankAlgorithm) {
         super();
@@ -30,8 +30,8 @@ public class SearchStatisticsBuilder<T> implements ISearchStatisticsBuilder<Arra
         return this;
     }
     @Override
-    public ISearchStatisticsBuilder<ArrayList<T>> takeFirstElements(int takeFirstElements) {
-        this.takeFirstElements = takeFirstElements;
+    public ISearchStatisticsBuilder<ArrayList<T>> takeFirstResults(int takeFirstResults) {
+        this.takeFirstResults = takeFirstResults;
         return this;
     }
     @Override
@@ -55,7 +55,7 @@ public class SearchStatisticsBuilder<T> implements ISearchStatisticsBuilder<Arra
 
         return indexes.entrySet()
                 .stream()
-                .limit(this.takeFirstElements)
+                .limit(this.takeFirstResults)
                 .sorted((Map.Entry.<Object, Integer>comparingByValue().reversed()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
     }

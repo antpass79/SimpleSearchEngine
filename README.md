@@ -78,6 +78,15 @@ The tests check:
 - the statistics builder
 - the search engine
 
+###Note on the tests
+
+In order to fill the data structure, the ISearchIndexer can be used to implement a custom indexer. In the project the are two indexer:
+
+* TextIndexer: it reads a list of string and organizes the words inside in the data structure.
+* DirectoryIndexer: it reads all *.txt* files in a specified directory (not sub directory) and creates the data structure based on the found words.
+
+For testing the engine, flow the TextIndexer is used, in order to avoid the directory reading.
+
 ## Architecture
 
 The below class diagrams show the interactions among the components

@@ -1,0 +1,347 @@
+TEST EVALUATION  by Lawrence M. Rudner, ERIC/AE 12/93
+
+You should gather the information you need to evaluate a test.
+
+  1) Be sure you have a good idea what you want a test to
+     measure and how you are going to use it.
+  2) Get a specimen set from the publisher. Be sure it
+     includes technical documentation.
+  3) Look at reviews prepared by others. The Buros and Pro-Ed
+     Test Locators should help you identify some existing
+     reviews. The MMY also contains references in the
+     professional literature concerning cited tests. The ERIC
+     database can also be used to identify existing reviews.
+  4) Read the materials and determine for yourself whether the
+     publisher has made a compelling case that the test is
+     valid and appropriate for your intended use.
+
+There are several guidelines to help you evaluate tests.
+
+  o  The Code of Fair Testing Practices, which is available
+     through this gopher site.
+  o  American Psychological Association (1986) Standards for
+     Educational and Psychological Tests and Manuals. Washington,
+     DC: author
+  o  Equal Employment Opportunity Commission (1978) Uniform
+     Guidelines on Employee Selection Procedures, Federal
+     Register 43, 116, 38295 - 38309.
+  o  Society for Industrial and Organizational Psychology (1987)
+     Principles for the validation and use of personnel selection
+     procedures, Third edition, College Park, MD: author.
+
+In this brief, we identify key standards from the Standards for
+Educational and Psychological Testing established by the American
+Educational Research Association, the American Psychological
+Association, and the National Council on Measurement in
+Education. We describe these standards and questions you may want
+to raise to evaluate whether the standard has been met.
+
+We discuss standards concerning
+
+  A. Test coverage and use
+  B. Appropriate samples for test validation and norming
+  C. Reliability
+  D. Predictive validity
+  E. Content validity
+  F. Construct validity
+  G. Test administration
+  H. Test reporting
+  I. Test and item bias
+
+
+A. Test coverage and use
+
+There must be a clear statement of recommended uses and a
+description of the population for which the test is intended.
+
+The principal question to be asked in evaluating a test is
+whether it is appropriate for your intended purposes and your
+students.  The use intended by the test developer must be
+justified by the publisher on technical grounds.  You then need
+to evaluate your intended use against the publisher's intended
+use and the characteristics of the test.
+
+Questions to ask are:
+
+1.   What are the intended uses of the test?  What types of
+     interpretations does the publisher feel are appropriate?
+     Are foreseeable inappropriate applications identified?
+
+2.   Who is the test designed for?  What is the basis for
+     considering whether the test is applicable to your students?
+
+
+B. Appropriate samples for test validation and norming.
+
+The samples used for test validation and norming must be of
+adequate size and must be sufficiently representative to
+substantiate validity statements, to establish appropriate norms,
+and to support conclusions regarding the use of the instrument
+for the intended purpose.
+
+The individuals in the norming and validation samples should be
+representative of the group for which the test is intended in
+terms of age, experience and background.
+
+Questions to ask are:
+
+1.   How were the samples used in pilot testing, validation and
+     norming chosen?  Are they representative of the population
+     for which the test is intended?  How is this sample related
+     to the your population of students?  Were participation
+     rates appropriate?  Can you draw meaningful comparisons of
+     your students and these students?
+
+2.   Was the number of test-takers large enough to develop stable
+     estimates with minimal fluctuation due to sampling errors?
+     Where statements are made concerning subgroups, is the
+     number of test-takers in each subgroup adequate?
+
+3.   Do the difficulty levels of the test and criterion measures
+     (if any) provide an adequate basis for validating and
+     norming the instrument?  Are there sufficient variations in
+     test scores?
+
+4.   How recent was the norming?
+
+
+C. Reliability
+
+The test is sufficiently reliable to permit stable estimates of
+individual ability.
+
+Fundamental to the evaluation of any instrument is the degree to
+which test scores are free from various sources of measurement
+error and are consistent from one occasion to another.  Sources
+of measurement error, which include fatigue, nervousness, content
+sampling, answering mistakes, misinterpretation of instructions,
+and guessing, will always contribute to an individual's score and
+lower the reliability of the test.
+
+Different types of reliability estimates should be used to
+estimate the contributions of different sources of measurement
+error.  Inter-rater reliability coefficients provide estimates of
+errors dues to inconsistencies in judgement between raters.
+Alternate-form reliability coefficients provide estimates of the
+extent to which individuals can be expected to rank the same on
+alternate forms of a test.  Of primary interest are estimates of
+internal consistency which account for error due to content
+sampling, usually the largest single component of measurement
+error.
+
+Questions to ask are:
+
+1.   Have appropriate types of reliability estimates have been
+     computed?  Have appropriate statistics been used to compute
+     these estimates? (Split half-reliability coefficients, for
+     example, should not be used with speeded tests as they will
+     produce artificially high estimates.)
+
+2.   What are the reliabilities of the test for different groups
+     of test-takers?  How were they computed?
+
+3.   Is the reliability sufficiently high to warrant the use of
+     the test as a basis for making decisions concerning
+     individual students?
+
+
+D. Predictive validity
+
+The test adequately predicts academic performance.
+
+In terms of an achievement test, predictive validity refers to
+the extent to which a test can be appropriately used to draw
+inferences regarding achievement.  Empirical evidence in support
+of predictive validity must include a comparison of performance
+on the test being validated against performance on outside
+criteria.
+
+A variety of measures are available as outside criteria.  Grades,
+class rank, other tests, teacher ratings, and other criteria have
+been used.  Each of these measures, however, have their own
+limitations.
+
+There are also a variety of ways to demonstrate the relationship
+between the test being validated and subsequent performance.
+Scatterplots, regression equations, and expectancy tables should
+be provided in addition to correlation coefficients.
+
+Questions to ask are:
+
+1.   What criterion measure(s) have been used in evaluating
+     validity?  What is the rationale for choosing this measure?
+     Is this criterion measure appropriate?
+
+2.   Is the distribution of scores on the criterion measure
+     adequate?
+
+3.   What is the basis for the statistics used to demonstrate
+     predictive validity?
+
+4.   What is the overall predictive accuracy of the test? How
+     accurate are predictions for individuals whose scores are
+     close to cut-points of interest?
+
+
+E. Content validity
+
+The test measures content of interest.
+
+Content validity refers to the extent to which the test questions
+are representative of the skills in the specified domain.
+
+Content validity will often be evaluated by an examination of the
+plan and procedures used in test construction.  Did the test
+development procedure follow a rational approach that ensures
+appropriate content?  Did the process ensure that the collection
+of items would be representative of appropriate skills?
+
+Questions to ask are:
+
+1.   Is there a clear statement of the universe of skills
+     represented by the test?  What is the basis for selecting
+     this set of skills?  What research was conducted to
+     determine desired test content and/or evaluate it once
+     selected?
+
+2.   Were the procedures used to generate test content and items
+     consistent with the test specifications?
+
+3.   What was the composition of expert panels used in content
+     validation?  What process was used to elicit their
+     judgments?
+
+4.   How similar is this content to the content you are
+     interested in testing?
+
+
+F. Construct validity
+
+The test measures the right psychological constructs.
+
+Construct validity refers to the extent to which a test measures
+a trait derived from research or experience that have been
+constructed to explain observable behavior.  Intelligence, self-
+esteem, and creativity are examples of such psychological traits.
+
+Evidence in support of construct validity can take many forms.
+One approach is to demonstrate that the items within a measure
+are inter-related and therefore measure a single construct.
+Inter-item correlation and factor analysis are often used to
+demonstrate relationships among the items.
+
+Another approach is to demonstrate that the test behaves as one
+would expect a measure of the construct to behave.  One might
+expect a measure of creativity to show a greater correlation with
+a measure of artistic ability than a measure of scholastic
+achievement would show.
+
+Questions to ask are:
+
+1.   Is the conceptual framework for each tested construct clear
+     and well founded?  What is the basis for concluding that the
+     construct is related to the purposes of the test?
+
+2.   Does the framework provide a basis for testable hypotheses
+     concerning the construct?  Are these hypotheses supported by
+     empirical data?
+
+
+
+G. Test administration
+
+Detailed and clear instructions outlining appropriate test
+administration procedures are provided.
+
+Statements concerning the validity of a test for an intended
+purpose and the accuracy of the norms associated with a test can
+only generalize to testing situations which replicate the
+conditions used to establish validity and obtain normative data.
+Test administrators need detailed and clear instructions in order
+to replicate these conditions.
+
+All test administration specifications, such as instructions to
+test takers, time limits, use of reference materials, use of
+calculators, lighting, equipment, assigning seats, monitoring,
+room requirements, testing sequence, and time of day, should be
+fully described.
+
+Questions to ask are:
+
+1.   Will test administrators understand precisely what is
+     expected of them?
+
+2.   Do the test administration procedures replicate the
+     conditions under which the test was validated and normed?
+     Are these procedures standardized?
+
+
+
+H. Test reporting
+
+The methods used to report test results, including scaled scores,
+subtests results and combined test results, are described fully
+along with the rationale for each method.
+
+Test results should be presented in a manner that will help
+schools, teachers and students to make decisions that are
+consistent with appropriate uses of the test.  Help should be
+available for interpreting and using the test results.
+
+Questions to ask are:
+
+1.   How are test results reported to test-takers?  Are they
+     clear and consistent with the intended use of the test?  Are
+     the scales used in reporting results conducive to proper
+     test use?
+
+2.   What materials and resources are available to aid in
+     interpreting test results?
+
+
+I. Test and item bias
+
+The test is not biased or offensive with regard to race, sex,
+native language, ethnic origin, geographic region or other
+factors.
+
+Test developers are expected to exhibit a sensitivity to the
+demographic characteristics of test-takers, and steps should be
+taken during test development, validation, standardization, and
+documentation to minimize the influence of cultural factors on
+individual test scores.  These steps may include the use of
+individuals to evaluate items for offensiveness and cultural
+dependency, the use of statistics to identify differential item
+difficulty, and an examination of predictive validity for
+different groups.
+
+Tests are not expected to yield equivalent mean scores across
+population groups.  To do so would be to inappropriately assume
+that all groups have had the same educational and cultural
+experiences.  Rather, tests should yield the same scores and
+predict the same likelihood of success for individual test-takers
+of the same ability, regardless of group membership.
+
+Questions to ask are:
+
+1.   Were reviews conducted during the test development and
+     validation process to minimize possible bias and
+     offensiveness?  How were these reviews conducted?  What
+     criteria were used to evaluate the test specifications
+     and/or test items?  What was the basis for these criteria?
+
+2.   Were the items analyzed statistically for possible bias?
+     What method or methods were used?  How were items selected
+     for inclusion in the final version of the test?
+
+3.   Was the test analyzed for differential validity across
+     groups?  How was this analysis conducted?  Does the test
+     predict the same likelihood of success for individuals of
+     the same ability, regardless of group membership?
+
+4.   Was the test analyzed to determine the English language
+     proficiency required of test-takers?  Is the English
+     proficiency requirement excessive?  Should the test be used
+     with individuals who are not native speakers of English?
+
+.

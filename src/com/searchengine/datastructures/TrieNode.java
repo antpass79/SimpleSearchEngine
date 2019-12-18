@@ -17,8 +17,4 @@ public class TrieNode<T> {
 
     protected TrieNode() {
     }
-
-    TrieNode(T data) {
-        this.data = data;
-    }
 }

@@ -62,7 +62,7 @@ public class Trie<T> extends TrieNode<T> implements ISearchDataStructure {
     }
 
     private void insertNode(TrieNode<T> referenceNode, String key, T data) {
-        if (key.isEmpty() || key.isBlank()) {
+        if (key.isEmpty()) {
             this.addDataToNode(referenceNode, data);
             return;
         }

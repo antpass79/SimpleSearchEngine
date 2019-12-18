@@ -3,7 +3,7 @@ package com.searchengine.commands;
 import java.util.HashMap;
 
 public class CommandResolver {
-    static HashMap<String, ICommand> commands = new HashMap<String, ICommand>();
+    static final HashMap<String, ICommand> commands = new HashMap<String, ICommand>();
 
     public static void register(String key, ICommand command) {
         if (!commands.containsKey(key)) {

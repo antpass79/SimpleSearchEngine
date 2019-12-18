@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SearchStatisticsBuilder<T> implements ISearchStatisticsBuilder<ArrayList<T>> {
-    IRankAlgorithm rankAlgorithm;
+    final IRankAlgorithm rankAlgorithm;
     int wordCount;
     HashMap<Object, Integer> map;
     int takeFirstResults;

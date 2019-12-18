@@ -3,7 +3,7 @@ package com.searchengine.datastructures;
 import java.util.HashMap;
 
 public class TrieNode<T> {
-    private HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
+    private final HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
     public HashMap<Character, TrieNode> getChildren() {
         return this.children;
     }

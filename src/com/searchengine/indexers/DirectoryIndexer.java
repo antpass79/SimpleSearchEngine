@@ -2,7 +2,6 @@ package com.searchengine.indexers;
 
 import com.searchengine.datastructures.ISearchDataStructure;
 import com.searchengine.datastructures.Trie;
-import com.searchengine.datastructures.TrieNode;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,8 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DirectoryIndexer implements ISearchIndexer<ArrayList<String>> {
-    File directory;
-    IFileFilter fileFilter;
+    final File directory;
+    final IFileFilter fileFilter;
 
     public DirectoryIndexer(File directory, IFileFilter fileFilter) {
         this.directory = directory;

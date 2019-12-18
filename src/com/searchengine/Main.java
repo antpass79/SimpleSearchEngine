@@ -48,9 +48,8 @@ public class Main {
 
     private static ISearchEngine createSearchEngine(ISearchIndexer indexer) {
         ISearchDataStructure searchDataStructure = indexer.index();
-        ISearchEngine searchEngine = new SimpleSearchEngine(searchDataStructure, new SearchStatisticsBuilder());
 
-        return searchEngine;
+        return new SimpleSearchEngine(searchDataStructure, new SearchStatisticsBuilder());
     }
 
     private static void initializeCommands(ISearchEngine searchEngine, int takeFirstElements) {

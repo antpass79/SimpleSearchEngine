@@ -7,9 +7,9 @@ import com.searchengine.statistics.SearchStatistics;
 import java.util.HashMap;
 
 public abstract class SearchEngine<T> implements ISearchEngine<SearchStatistics> {
-    ISearchStatisticsBuilder<T> searchStatisticsBuilder;
+    final ISearchStatisticsBuilder<T> searchStatisticsBuilder;
 
-    ISearchDataStructure<T> searchDataStructure;
+    final ISearchDataStructure<T> searchDataStructure;
     protected ISearchDataStructure<T> getSearchDataStructure() {
         return this.searchDataStructure;
     }

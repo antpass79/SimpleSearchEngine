@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class TextIndexer implements ISearchIndexer<ArrayList<String>> {
 
-    String[] text;
+    final String[] text;
 
     public TextIndexer(String[] text) {
         this.text = text;

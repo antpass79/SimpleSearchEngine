@@ -1,6 +1,5 @@
 package searchengine;
 
-import com.searchengine.statistics.ISearchStatisticsBuilder;
 import com.searchengine.statistics.SearchStatistics;
 import com.searchengine.statistics.SearchStatisticsBuilder;
 import org.junit.jupiter.api.Test;

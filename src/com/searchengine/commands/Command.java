@@ -1,7 +1,7 @@
 package com.searchengine.commands;
 
 public abstract class Command implements ICommand {
-    Object[] constructorParameters;
+    final Object[] constructorParameters;
     protected Object[] getConstructorParameters() {
         return this.constructorParameters;
     }

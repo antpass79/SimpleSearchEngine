@@ -1,7 +1,7 @@
 package com.searchengine.datastructures;
 
 public class Trie<T> implements ISearchDataStructure {
-    TrieNode<T> root = new TrieNode<>();
+    final TrieNode<T> root = new TrieNode<>();
 
     public Trie() {
     }

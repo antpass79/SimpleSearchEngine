@@ -56,7 +56,7 @@ public class SearchStatisticsBuilder<T> implements ISearchStatisticsBuilder<Arra
         return indexes.entrySet()
                 .stream()
                 .limit(this.takeFirstResults)
-                .sorted((Map.Entry.<Object, Integer>comparingByValue().reversed()))
+                .sorted(Map.Entry.<Object, Integer>comparingByValue().reversed())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
     }
 }

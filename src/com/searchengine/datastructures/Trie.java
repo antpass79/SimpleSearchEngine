@@ -1,23 +1,24 @@
 package com.searchengine.datastructures;
 
-public class Trie<T> extends TrieNode<T> implements ISearchDataStructure {
+public class Trie<T> implements ISearchDataStructure {
+    TrieNode<T> root = new TrieNode<>();
 
     public Trie() {
     }
 
     public boolean isEmpty() {
-        return this.getChildren().isEmpty();
+        return this.root.getChildren().isEmpty();
     }
 
     public void insert(String key, T data) {
         TrieNode referenceNode;
         char firstChar = TrieKey.getFirstChar(key);
-        if (this.getChildren().containsKey(firstChar)) {
-            referenceNode = this.getChildren().get(firstChar);
+        if (this.root.getChildren().containsKey(firstChar)) {
+            referenceNode = this.root.getChildren().get(firstChar);
         }
         else {
             referenceNode = new TrieNode<T>();
-            this.getChildren().put(firstChar, referenceNode);
+            this.root.getChildren().put(firstChar, referenceNode);
         }
 
         this.insertNode(referenceNode, TrieKey.getSubKey(key), data);
@@ -25,7 +26,7 @@ public class Trie<T> extends TrieNode<T> implements ISearchDataStructure {
 
     public boolean containsKey(String key) {
         char[] characters = key.toCharArray();
-        TrieNode<T> currentNode = this;
+        TrieNode<T> currentNode = this.root;
         boolean found = true;
 
         for (char ch: characters) {
@@ -42,7 +43,7 @@ public class Trie<T> extends TrieNode<T> implements ISearchDataStructure {
 
     public T find(String key) throws ArrayIndexOutOfBoundsException {
         char[] characters = key.toCharArray();
-        TrieNode<T> currentNode = this;
+        TrieNode<T> currentNode = this.root;
         boolean found = true;
 
         for (char ch: characters) {

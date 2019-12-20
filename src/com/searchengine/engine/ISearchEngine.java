@@ -1,5 +1,5 @@
 package com.searchengine.engine;
 
-public interface ISearchEngine<TResult> {
-    TResult[] search(String[] words, int takeFirstResults);
+public interface ISearchEngine<TOutput> {
+    TOutput search(String[] words, int takeFirstResults);
 }

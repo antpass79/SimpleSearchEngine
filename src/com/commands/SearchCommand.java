@@ -1,7 +1,6 @@
 package com.commands;
 
 import com.wordsearchengine.WordsSearchEngine;
-import com.wordsearchengine.models.SearchInput;
 import com.wordsearchengine.models.RankStatistics;
 
 public class SearchCommand extends Command {
@@ -16,7 +15,7 @@ public class SearchCommand extends Command {
 
     @Override
     protected void onExecute(String[] commandParameters) {
-        RankStatistics[] rankStatistics = this.searchEngine.search(new SearchInput(commandParameters, this.takeFirstResults));
+        RankStatistics[] rankStatistics = this.searchEngine.search(commandParameters);
 
         if (rankStatistics.length == 0) {
             System.out.println("no matches found");

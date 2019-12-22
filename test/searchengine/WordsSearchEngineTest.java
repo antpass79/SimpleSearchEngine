@@ -4,7 +4,6 @@ import com.searchengine.datastructures.ISearchDataStructure;
 import com.searchengine.indexers.fakes.FakeDirectory;
 import com.searchengine.indexers.fakes.FakeDirectoryIndexer;
 import com.searchengine.indexers.fakes.FakeFile;
-import com.wordsearchengine.models.SearchInput;
 import com.wordsearchengine.WordsSearchEngine;
 import com.searchengine.indexers.ISearchIndexer;
 import com.searchengine.indexers.TextIndexer;
@@ -22,7 +21,7 @@ class WordsSearchEngineTest {
         ISearchDataStructure searchDataStructure = searchIndexer.index();
         WordsSearchEngine searchEngine = new WordsSearchEngine(searchDataStructure, new RankStatisticsAlgorithm());
 
-        RankStatistics[] statistics = searchEngine.search(new SearchInput(new String[] {"word1"}, 10));
+        RankStatistics[] statistics = searchEngine.search(new String[] {"word1"});
 
         assertEquals(1, statistics.length, "statistics must be zero");
         assertEquals(100, statistics[0].getRank(), "statistics rank must be 100");
@@ -34,7 +33,7 @@ class WordsSearchEngineTest {
         ISearchDataStructure searchDataStructure = searchIndexer.index();
         WordsSearchEngine searchEngine = new WordsSearchEngine(searchDataStructure, new RankStatisticsAlgorithm());
 
-        RankStatistics[] statistics = searchEngine.search(new SearchInput(new String[] {"word"}, 10));
+        RankStatistics[] statistics = searchEngine.search(new String[] {"word"});
 
         assertEquals(0, statistics.length, "statistics must be zero");
     }
@@ -45,7 +44,7 @@ class WordsSearchEngineTest {
         ISearchDataStructure searchDataStructure = searchIndexer.index();
         WordsSearchEngine searchEngine = new WordsSearchEngine(searchDataStructure, new RankStatisticsAlgorithm());
 
-        RankStatistics[] statistics = searchEngine.search(new SearchInput(new String[] {"word1", "word2", "word3", "word4", "word5"}, 10));
+        RankStatistics[] statistics = searchEngine.search(new String[] {"word1", "word2", "word3", "word4", "word5"});
 
         assertEquals(3, statistics.length, "statistics must be 3");
     }
@@ -61,7 +60,7 @@ class WordsSearchEngineTest {
         ISearchDataStructure searchDataStructure = searchIndexer.index();
         WordsSearchEngine searchEngine = new WordsSearchEngine(searchDataStructure, new RankStatisticsAlgorithm());
 
-        RankStatistics[] statistics = searchEngine.search(new SearchInput(new String[] {"word1", "word2", "word3", "word4", "word5", "test3"}, 10));
+        RankStatistics[] statistics = searchEngine.search(new String[] {"word1", "word2", "word3", "word4", "word5", "test3"});
 
         assertEquals(3, statistics.length, "statistics must be 3");
     }
@@ -77,7 +76,7 @@ class WordsSearchEngineTest {
         ISearchDataStructure searchDataStructure = searchIndexer.index();
         WordsSearchEngine searchEngine = new WordsSearchEngine(searchDataStructure, new RankStatisticsAlgorithm());
 
-        RankStatistics[] statistics = searchEngine.search(new SearchInput(new String[] {"word5", "word3"}, 10));
+        RankStatistics[] statistics = searchEngine.search(new String[] {"word5", "word3"});
 
         assertEquals(100, statistics[0].getRank(), "statistics rank for the element 1 must be 100");
         assertEquals("file1.txt", statistics[0].getFile(), "statistics data for the element 1 must be file1.txt");
@@ -108,7 +107,7 @@ class WordsSearchEngineTest {
         WordsSearchEngine searchEngine = new WordsSearchEngine(searchDataStructure, new RankStatisticsAlgorithm());
         RankStatistics[] statistics = searchEngine
                 .takeFirstResults(5)
-                .search(new SearchInput(new String[] {"word1", "test1", "We", "the", "machine", "sun"}, 10));
+                .search(new String[] {"word1", "test1", "We", "the", "machine", "sun"});
 
         assertEquals(5, statistics.length, "statistics count must be 5");
     }}

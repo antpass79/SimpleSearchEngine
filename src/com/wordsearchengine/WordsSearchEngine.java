@@ -4,14 +4,12 @@ import com.searchengine.datastructures.ISearchDataStructure;
 import com.searchengine.engine.SearchEngine;
 import com.searchengine.statistics.ISearchStatisticsAlgorithm;
 import com.wordsearchengine.models.RankAlgorithmInput;
-import com.wordsearchengine.models.SearchInput;
 import com.wordsearchengine.models.RankStatistics;
-import com.wordsearchengine.statistics.RankStatisticsAlgorithm;
 
 import java.util.*;
 import java.util.stream.Stream;
 
-public class WordsSearchEngine extends SearchEngine<SearchInput, RankStatistics, ArrayList<String>> {
+public class WordsSearchEngine extends SearchEngine<String[], RankStatistics, ArrayList<String>> {
     final ISearchStatisticsAlgorithm<RankAlgorithmInput, Integer> rankAlgorithm;
 
     public WordsSearchEngine(ISearchDataStructure<ArrayList<String>> searchDataStructure, ISearchStatisticsAlgorithm<RankAlgorithmInput, Integer> rankAlgorithm) {
@@ -20,9 +18,9 @@ public class WordsSearchEngine extends SearchEngine<SearchInput, RankStatistics,
     }
 
     @Override
-    protected List<RankStatistics> onSearch(SearchInput input) {
+    protected List<RankStatistics> onSearch(String[] input) {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        for (String word : input.getWords()) {
+        for (String word : input) {
             if (this.getSearchDataStructure().containsKey(word)) {
                 ArrayList<String> searchedData = this.getSearchDataStructure().find(word);
                 searchedData.forEach(data -> {
@@ -35,7 +33,7 @@ public class WordsSearchEngine extends SearchEngine<SearchInput, RankStatistics,
             }
         }
 
-        return this.mapToList(map, input.getWords().length);
+        return this.mapToList(map, input.length);
     }
 
     @Override

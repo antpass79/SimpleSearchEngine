@@ -69,14 +69,6 @@ Once the package is downloaded [or unzipped], follow the below steps to run the 
  - **:quit** to exit the program
  - once the program starts, the command **search** is automatically ready to listen for a list of words, separated by a whitespace 
 
- ## Run tests
- 
-In the test folder there are a set of tests runnable from the development environment (IntelliJ IDEA).
-The tests check:
-
-- the data structure
-- the search engine
-
 ###Note on the tests
 
 In order to fill the data structure, the ISearchIndexer can be used to implement a custom indexer. In the project the are two indexer:
@@ -92,3 +84,65 @@ For testing the engine, flow the TextIndexer and the FakeDirectoryIndexer are us
 The below class diagrams show the interactions among the components
 
 ![architecture](<assets/SearchEngine Class Diagrams.jpg>)
+
+## How to implement a custom search engine
+
+The below sections explain a words search engine to find words in files in a specific directory.
+
+### SearchEngine Core
+
+The *ISearchEngine<TInput, TOutput>* interface exposes 2 methods:
+
+    ISearchEngine<TInput, TOutput> takeFirstResults(int count);
+    TOutput[] search(TInput input);
+
+The base abstract class that implements the above interface and provides the base methods to override and write the custom logic is *SearchEngine*.
+
+The *SearchEngine<TInput, TOutput, TSearchingData>* has 3 overridable methods in which is possible to customize the flow of the searching process:
+
+    List<TSearchOutput> onSearch(TInput input);
+    // to find data in the data structure
+
+    Stream<TOutput> onFilter(Stream<TOutput> unfilteredOutputStream);
+    // to filter/prepare data with custom logic
+    
+    TOutput[] onConvert(Stream<TOutput> filteredOutputStream);
+    // to convert to the output data
+
+In addition the constructor takes the interface ISearchDataStructure<T>, that represents the data structure on which the searching process runs, with the below functions:
+
+    boolean containsKey(String key);
+    T find(String key);
+
+### Indexer
+
+For indexing the words in all files in a specific directory, the *DirectoryIndexer* can be used. It is possible to pass the relative or absolute path to the instance of the class and call the *index* function, it returns the data structure with all data.
+
+The data structure is a trie: for each found word, the corresponding node is a list of file names in which the word is found.
+
+### WordsSearchEngine
+
+Imaging to implement a search engine to find words in files and gets the percentage of words found in each files, the class can be called *WordsSearchEngine*.
+
+The *WordsSearchEngine* inherits from *SearchEngine*. The generic types for *SearchEngine* are:
+
+- *TInput*: the list of words to find -> *String[]*
+- *TOutput*: the results that we want to get -> *RankStatistics[]*
+- *TSearchingData*: the data used by the data structure to hold information -> *ArrayList<String>* 
+
+
+Through the constructor, the data structure is injected in the WordsSearchEngine.
+
+WordsSearchEngine must override the 3 abstract methods of *SearchEngine*:
+
+- *onSearch*: to find all results in the data structure (the implementation is a trie)
+- *onFilter*: to filter/prepare the results, taking only a portion of the data and ordering the data by rank.
+- *onConvert*: to convert the manipulated data to the output data (*RankStatistics*).
+
+## Run tests
+ 
+In the test folder there are a set of tests runnable from the development environment (IntelliJ IDEA).
+The tests check:
+
+- the data structure
+- the search engine

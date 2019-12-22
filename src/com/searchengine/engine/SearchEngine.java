@@ -5,7 +5,7 @@ import com.searchengine.datastructures.ISearchDataStructure;
 import java.util.List;
 import java.util.stream.Stream;
 
-public abstract class SearchEngine<TSearchInput, TSearchOutput, TSearchingData> implements ISearchEngine<TSearchInput, TSearchOutput> {
+public abstract class SearchEngine<TInput, TOutput, TSearchingData> implements ISearchEngine<TInput, TOutput> {
     final ISearchDataStructure<TSearchingData> searchDataStructure;
     protected ISearchDataStructure<TSearchingData> getSearchDataStructure() {
         return this.searchDataStructure;
@@ -15,27 +15,27 @@ public abstract class SearchEngine<TSearchInput, TSearchOutput, TSearchingData> 
         return this.takeFirstResults;
     }
 
-    public SearchEngine(ISearchDataStructure<TSearchingData> searchDataStructure) {
+    protected SearchEngine(ISearchDataStructure<TSearchingData> searchDataStructure) {
         this.searchDataStructure = searchDataStructure;
     }
 
-    public final TSearchOutput[] search(TSearchInput input) {
-        List<TSearchOutput> unfilteredOutput = this.onSearch(input);
-        Stream<TSearchOutput> filteredOutputStream = this.onFilter(unfilteredOutput.stream());
+    public final TOutput[] search(TInput input) {
+        List<TOutput> unfilteredOutput = this.onSearch(input);
+        Stream<TOutput> filteredOutputStream = this.onFilter(unfilteredOutput.stream());
         return this.onConvert(filteredOutputStream);
     }
 
-    public final ISearchEngine<TSearchInput, TSearchOutput> takeFirstResults(int count) {
+    public final ISearchEngine<TInput, TOutput> takeFirstResults(int count) {
         this.takeFirstResults = count;
         return this;
     }
 
-    protected abstract List<TSearchOutput> onSearch(TSearchInput input);
+    protected abstract List<TOutput> onSearch(TInput input);
 
-    protected Stream<TSearchOutput> onFilter(Stream<TSearchOutput> unfilteredOutputStream) {
+    protected Stream<TOutput> onFilter(Stream<TOutput> unfilteredOutputStream) {
         return unfilteredOutputStream
                 .limit(this.getTakeFirstResults());
     }
 
-    protected abstract TSearchOutput[] onConvert(Stream<TSearchOutput> filteredOutputStream);
+    protected abstract TOutput[] onConvert(Stream<TOutput> filteredOutputStream);
 }

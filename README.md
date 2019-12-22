@@ -5,7 +5,7 @@ search engine for finding words in file or text, written in java
 
 ### Assumptions
 This simple search engine is based on some assumptions in order to make easier the base implementation.
-There is always time to complicate one's life. All components involved in the library are expandable and replaceable.
+There is always time to complicate one's life.
 
 Below the assumptions:
 
@@ -75,7 +75,6 @@ In the test folder there are a set of tests runnable from the development enviro
 The tests check:
 
 - the data structure
-- the statistics builder
 - the search engine
 
 ###Note on the tests
@@ -84,8 +83,9 @@ In order to fill the data structure, the ISearchIndexer can be used to implement
 
 * TextIndexer: it reads a list of string and organizes the words inside in the data structure.
 * DirectoryIndexer: it reads all *.txt* files in a specified directory (not sub directory) and creates the data structure based on the found words.
+* FakeDirectoryIndexer: it holds a fake directory structure for testing purpose.
 
-For testing the engine, flow the TextIndexer is used, in order to avoid the directory reading.
+For testing the engine, flow the TextIndexer and the FakeDirectoryIndexer are used, in order to avoid the directory reading.
 
 ## Architecture
 

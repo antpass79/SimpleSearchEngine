@@ -1,4 +1,4 @@
-package com.searchengine.commands;
+package com.commands;
 
 public class QuitCommand extends Command {
     @Override

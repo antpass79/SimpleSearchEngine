@@ -1,4 +1,4 @@
-package com.searchengine.commands;
+package com.commands;
 
 public class Commands {
     public static final String COMMAND_QUIT = ":quit";

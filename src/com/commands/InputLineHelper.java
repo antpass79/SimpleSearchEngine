@@ -1,4 +1,4 @@
-package com.searchengine.commands;
+package com.commands;
 
 public class InputLineHelper {
     public static String extractCommandName(String line) {

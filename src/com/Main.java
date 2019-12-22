@@ -1,12 +1,13 @@
-package com.searchengine;
+package com;
 
-import com.searchengine.commands.*;
+import com.commands.*;
 import com.searchengine.datastructures.ISearchDataStructure;
 import com.searchengine.engine.ISearchEngine;
+import com.wordsearchengine.WordsSearchEngine;
 import com.searchengine.indexers.DirectoryIndexer;
 import com.searchengine.indexers.ISearchIndexer;
 import com.searchengine.indexers.TxtFileFilter;
-import com.searchengine.statistics.SearchStatisticsBuilder;
+import com.wordsearchengine.statistics.RankStatisticsAlgorithm;
 
 import java.io.File;
 import java.util.Scanner;
@@ -49,7 +50,7 @@ public class Main {
     private static ISearchEngine createSearchEngine(ISearchIndexer indexer) {
         ISearchDataStructure searchDataStructure = indexer.index();
 
-        return new SimpleSearchEngine(searchDataStructure, new SearchStatisticsBuilder());
+        return new WordsSearchEngine(searchDataStructure, new RankStatisticsAlgorithm());
     }
 
     private static void initializeCommands(ISearchEngine searchEngine, int takeFirstElements) {

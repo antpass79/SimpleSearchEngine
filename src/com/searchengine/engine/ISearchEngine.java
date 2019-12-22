@@ -1,5 +1,6 @@
 package com.searchengine.engine;
 
-public interface ISearchEngine<TOutput> {
-    TOutput search(String[] words, int takeFirstResults);
+public interface ISearchEngine<TInput, TOutput> {
+    ISearchEngine<TInput, TOutput> takeFirstResults(int count);
+    TOutput[] search(TInput input);
 }

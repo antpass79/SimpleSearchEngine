@@ -1,4 +1,4 @@
-package com.searchengine.commands;
+package com.commands;
 
 import java.util.HashMap;
 

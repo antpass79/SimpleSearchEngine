@@ -1,4 +1,4 @@
-package com.searchengine.commands;
+package com.commands;
 
 public abstract class Command implements ICommand {
     final Object[] constructorParameters;

@@ -1,4 +1,4 @@
-package com.searchengine.commands;
+package com.commands;
 
 public interface ICommandBuilder {
     ICommandBuilder constructorParameters(Object[] parameters);

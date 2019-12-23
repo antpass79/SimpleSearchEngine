@@ -69,16 +69,6 @@ Once the package is downloaded [or unzipped], follow the below steps to run the 
  - **:quit** to exit the program
  - once the program starts, the command **search** is automatically ready to listen for a list of words, separated by a whitespace 
 
-###Note on the tests
-
-In order to fill the data structure, the ISearchIndexer can be used to implement a custom indexer. In the project the are two indexer:
-
-* TextIndexer: it reads a list of string and organizes the words inside in the data structure.
-* DirectoryIndexer: it reads all *.txt* files in a specified directory (not sub directory) and creates the data structure based on the found words.
-* FakeDirectoryIndexer: it holds a fake directory structure for testing purpose.
-
-For testing the engine, flow the TextIndexer and the FakeDirectoryIndexer are used, in order to avoid the directory reading.
-
 ## Architecture
 
 The below class diagrams show the interactions among the components
@@ -146,3 +136,13 @@ The tests check:
 
 - the data structure
 - the search engine
+
+### Note on the tests
+
+In order to fill the data structure, the ISearchIndexer can be used to implement a custom indexer. In the project the are two indexer:
+
+* TextIndexer: it reads a list of string and organizes the words inside in the data structure.
+* DirectoryIndexer: it reads all *.txt* files in a specified directory (not sub directory) and creates the data structure based on the found words.
+* FakeDirectoryIndexer: it holds a fake directory structure for testing purpose.
+
+For testing the engine, flow the TextIndexer and the FakeDirectoryIndexer are used, in order to avoid the directory reading.
